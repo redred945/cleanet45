@@ -59,7 +59,7 @@ button{font-family:inherit;cursor:pointer}
 }
 
 /* Labels / eyebrows — DM Mono, uppercase, tracking large */
-.eyebrow,.sec-eyebrow,.svc-num,.gal-caption .tag,.promo-badge,.stat span,.ft h5,.ft-bottom,.rp-card span,.zone-note-label{
+.eyebrow,.sec-eyebrow,.svc-num,.gal-caption .tag,.promo-badge,.stat>span,.ft h5,.ft-bottom,.rp-card span,.zone-note-label{
   font-family:var(--ff-mono);font-weight:500;letter-spacing:.15em;text-transform:uppercase;
 }
 
@@ -165,7 +165,7 @@ button{font-family:inherit;cursor:pointer}
 .stat b{display:flex;align-items:baseline;justify-content:center;font-family:var(--ff-display);font-size:clamp(22px,3.4vw,32px);font-weight:800;letter-spacing:-.02em;white-space:nowrap}
 .stat b .cy{color:var(--blue-2)}
 .stat b .sfx{font-size:.62em;line-height:1;color:var(--text)}
-.stat span{display:block;margin-top:8px;font-size:10.5px;color:var(--text-mute)}
+.stat>span{display:block;margin-top:8px;font-size:10.5px;color:var(--text-mute)}
 @media(min-width:720px){.stats-in{grid-template-columns:repeat(4,1fr)}}
 
 /* ===================== MARQUEE ===================== */
