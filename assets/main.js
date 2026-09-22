@@ -82,6 +82,21 @@
     });
   });
 
+  /* Zone map: click a city to recenter/highlight it */
+  var zoneList = document.getElementById("zoneList");
+  var zoneMap = document.getElementById("zoneMap");
+  if (zoneList && zoneMap) {
+    zoneList.addEventListener("click", function (e) {
+      var btn = e.target.closest("button[data-city]");
+      if (!btn) return;
+      zoneList.querySelectorAll("button").forEach(function (b) { b.classList.remove("active"); });
+      btn.classList.add("active");
+      var q = encodeURIComponent(btn.getAttribute("data-city"));
+      var z = btn.getAttribute("data-zoom") || "13";
+      zoneMap.src = "https://www.google.com/maps?q=" + q + "&z=" + z + "&output=embed";
+    });
+  }
+
   /* Footer year */
   var y = document.getElementById("year");
   if (y) y.textContent = new Date().getFullYear();

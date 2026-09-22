@@ -91,15 +91,15 @@
 <section class="hero">
   <div class="hero-media" aria-hidden="true">
     <picture>
-      <source media="(max-width:640px)" srcset="assets/img/gallery/car-exterior-1-sm.jpg" />
-      <img src="assets/img/gallery/car-exterior-1.jpg" alt="" loading="eager" fetchpriority="high" />
+      <source media="(max-width:640px)" srcset="assets/img/gallery/hero-exterieur-sm.jpg" />
+      <img src="assets/img/gallery/hero-exterieur.jpg" alt="" loading="eager" fetchpriority="high" />
     </picture>
   </div>
   <div class="hero-glow" aria-hidden="true"></div>
   <div class="hero-in">
     <p class="eyebrow">Orléans &amp; agglomération · Auto, textile &amp; pro</p>
     <h1><span>L'exigence</span><span class="accent">propreté.</span></h1>
-    <p class="hero-sub">Un seul contact pour la propreté de votre véhicule et de votre intérieur. CLEANET 45 intervient à Orléans et dans son agglomération : nettoyage automobile, canapés, moquettes, locaux professionnels, rénovation de phares et diagnostic électronique — sur rendez-vous, devis gratuit et sans engagement.</p>
+    <p class="hero-sub">Auto, canapé, moquette, locaux pro, phares, diagnostic électronique — un seul interlocuteur à Orléans et son agglomération. Devis gratuit, sans engagement.</p>
     <div class="hero-cta">
       <a class="btn btn-blue" href="contact.html">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v16H4z" opacity="0"/><path d="M3 7l9 6 9-6M4 5h16a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1Z"/></svg>
@@ -122,9 +122,9 @@
 <!-- ===================== STATS ===================== -->
 <div class="stats sec-edge-t sec-edge-b">
   <div class="stats-in">
-    <div class="stat"><b><span class="cy">795</span>+</b><span>Abonnés Facebook</span></div>
+    <div class="stat"><b><span class="cy">795</span><span class="sfx">+</span></b><span>Abonnés Facebook</span></div>
     <div class="stat"><b><span class="cy">6</span></b><span>Domaines d'expertise</span></div>
-    <div class="stat"><b><span class="cy">100</span>%</b><span>Devis gratuits</span></div>
+    <div class="stat"><b><span class="cy">100</span><span class="sfx">%</span></b><span>Devis gratuits</span></div>
     <div class="stat"><b>Orléans</b><span>&amp; agglomération</span></div>
   </div>
 </div>
@@ -350,19 +350,19 @@
         <a class="btn btn-ghost btn-sm" href="contact.html" style="margin-top:24px">Vérifier ma commune</a>
       </div>
       <div class="split-content" data-reveal>
-        <ul class="zone-list">
-          <li><span class="zone-dot"></span>Orléans</li>
-          <li><span class="zone-dot"></span>Saran</li>
-          <li><span class="zone-dot"></span>Fleury-les-Aubrais</li>
-          <li><span class="zone-dot"></span>Saint-Jean-de-Braye</li>
-          <li><span class="zone-dot"></span>Olivet</li>
-          <li><span class="zone-dot"></span>La Chapelle-Saint-Mesmin</li>
-          <li><span class="zone-dot"></span>Ormes</li>
-          <li><span class="zone-dot"></span>Saint-Jean-le-Blanc</li>
-          <li><span class="zone-dot"></span>Ingré</li>
+        <ul class="zone-list" id="zoneList">
+          <li><button type="button" class="active" data-city="Orléans, France" data-zoom="12"><span class="zone-dot"></span>Orléans</button></li>
+          <li><button type="button" data-city="Saran, France" data-zoom="13"><span class="zone-dot"></span>Saran</button></li>
+          <li><button type="button" data-city="Fleury-les-Aubrais, France" data-zoom="13"><span class="zone-dot"></span>Fleury-les-Aubrais</button></li>
+          <li><button type="button" data-city="Saint-Jean-de-Braye, France" data-zoom="13"><span class="zone-dot"></span>Saint-Jean-de-Braye</button></li>
+          <li><button type="button" data-city="Olivet, France" data-zoom="13"><span class="zone-dot"></span>Olivet</button></li>
+          <li><button type="button" data-city="La Chapelle-Saint-Mesmin, France" data-zoom="13"><span class="zone-dot"></span>La Chapelle-Saint-Mesmin</button></li>
+          <li><button type="button" data-city="Ormes, France" data-zoom="13"><span class="zone-dot"></span>Ormes</button></li>
+          <li><button type="button" data-city="Saint-Jean-le-Blanc, France" data-zoom="13"><span class="zone-dot"></span>Saint-Jean-le-Blanc</button></li>
+          <li><button type="button" data-city="Ingré, France" data-zoom="13"><span class="zone-dot"></span>Ingré</button></li>
         </ul>
         <div class="zone-map-wrap">
-          <iframe class="zone-map" src="https://www.google.com/maps?q=Orl%C3%A9ans,+France&z=11&output=embed" title="Carte de la zone d'intervention CLEANET 45 : Orléans et son agglomération" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <iframe class="zone-map" id="zoneMap" src="https://www.google.com/maps?q=Orl%C3%A9ans,+France&z=12&output=embed" title="Carte de la zone d'intervention CLEANET 45 : Orléans et son agglomération" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
         <p class="zone-note">Une commune un peu plus loin non listée ? Contactez-nous : nous nous adaptons selon les disponibilités, des frais de déplacement pouvant s'appliquer selon la distance.</p>
       </div>
