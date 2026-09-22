@@ -404,3 +404,47 @@ button{font-family:inherit;cursor:pointer}
 
 /* ===================== MISC ===================== */
 .center-copy{max-width:640px;margin:0 auto;text-align:center}
+
+/* ===================== MOBILE PERFORMANCE ===================== */
+@media(max-width:640px){
+  .hd.scrolled .hd-in{backdrop-filter:blur(8px)}
+}
+
+/* ===================== MOBILE CAROUSELS (prestations / réalisations / process) =====================
+   En dessous de 768px, ces grilles deviennent des carrousels tactiles à scroll-snap.
+   Les règles ci-dessous sont volontairement placées en fin de fichier pour prendre le pas,
+   à largeur égale, sur les grilles définies plus haut (grid-template-columns). */
+@media(max-width:767px){
+  .svc-grid,.gal-grid,.proc-grid{
+    display:flex;
+    flex-wrap:nowrap;
+    overflow-x:auto;
+    overflow-y:hidden;
+    scroll-snap-type:x mandatory;
+    scroll-padding-left:24px;
+    -webkit-overflow-scrolling:touch;
+    scrollbar-width:none;
+    margin:0 -24px;
+    padding:4px 24px 10px;
+    -webkit-mask-image:linear-gradient(to right,transparent,#000 20px,#000 calc(100% - 20px),transparent);
+    mask-image:linear-gradient(to right,transparent,#000 20px,#000 calc(100% - 20px),transparent);
+  }
+  .svc-grid::-webkit-scrollbar,.gal-grid::-webkit-scrollbar,.proc-grid::-webkit-scrollbar{display:none}
+
+  .svc-grid > .svc-card,
+  .proc-grid > .proc-card{
+    flex:0 0 86%;
+    max-width:86%;
+    scroll-snap-align:start;
+  }
+  .gal-grid > .gal-item{
+    flex:0 0 78%;
+    max-width:78%;
+    scroll-snap-align:start;
+  }
+  .gal-grid > .gal-item.big{
+    grid-column:auto;
+    grid-row:auto;
+    aspect-ratio:4/5;
+  }
+}

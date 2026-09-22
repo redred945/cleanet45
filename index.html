@@ -14,7 +14,7 @@
 <meta property="og:locale" content="fr_FR" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@700;800&family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="assets/styles.css" />
 <script type="application/ld+json">
 {
@@ -90,7 +90,10 @@
 <!-- ===================== HERO ===================== -->
 <section class="hero">
   <div class="hero-media" aria-hidden="true">
-    <img src="assets/img/gallery/car-exterior-1.jpg" alt="" loading="eager" />
+    <picture>
+      <source media="(max-width:640px)" srcset="assets/img/gallery/car-exterior-1-sm.jpg" />
+      <img src="assets/img/gallery/car-exterior-1.jpg" alt="" loading="eager" fetchpriority="high" />
+    </picture>
   </div>
   <div class="hero-glow" aria-hidden="true"></div>
   <div class="hero-in">
@@ -143,7 +146,7 @@
       <p>De la voiture au canapé, du local professionnel au diagnostic électronique — un interlocuteur unique pour tous vos besoins de nettoyage à Orléans et son agglomération.</p>
     </div>
 
-    <div class="svc-grid">
+    <div class="svc-grid" tabindex="0" aria-label="Nos prestations, faites glisser pour voir toutes les cartes">
       <div class="svc-card" data-reveal>
         <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 16l1.5-5A2 2 0 0 1 7.4 9.5h9.2a2 2 0 0 1 1.9 1.5L20 16"/><circle cx="7" cy="17.5" r="1.6"/><circle cx="17" cy="17.5" r="1.6"/><path d="M4 16h16"/></svg></div>
         <h3>Nettoyage automobile</h3>
@@ -203,41 +206,41 @@
       <p>Un aperçu réel de nos prestations — véhicules et textiles confiés par nos clients à Orléans et son agglomération.</p>
     </div>
 
-    <div class="gal-grid" data-reveal>
+    <div class="gal-grid" data-reveal tabindex="0" aria-label="Galerie de réalisations, faites glisser pour voir plus de photos">
       <a class="gal-item big" href="https://www.facebook.com/Cleanet45/" target="_blank" rel="noopener">
-        <img src="assets/img/gallery/car-exterior-1.jpg" alt="Range Rover Sport noire, carrosserie brillante après nettoyage extérieur par CLEANET 45" loading="lazy" />
+        <img src="assets/img/gallery/car-exterior-1-sm.jpg" srcset="assets/img/gallery/car-exterior-1-sm.jpg 900w, assets/img/gallery/car-exterior-1.jpg 1600w" sizes="(max-width:767px) 78vw, (max-width:959px) 66vw, 48vw" alt="Range Rover Sport noire, carrosserie brillante après nettoyage extérieur par CLEANET 45" loading="lazy" />
         <span class="gal-caption"><span class="tag">Nettoyage automobile</span><h4>Range Rover Sport — extérieur</h4></span>
       </a>
       <a class="gal-item" href="https://www.facebook.com/Cleanet45/" target="_blank" rel="noopener">
-        <img src="assets/img/gallery/cuir-interieur-1.jpg" alt="Sièges arrière en cuir noir nettoyés, intérieur automobile impeccable" loading="lazy" />
+        <img src="assets/img/gallery/cuir-interieur-1-sm.jpg" srcset="assets/img/gallery/cuir-interieur-1-sm.jpg 900w, assets/img/gallery/cuir-interieur-1.jpg 1600w" sizes="(max-width:767px) 78vw, (max-width:959px) 33vw, 24vw" alt="Sièges arrière en cuir noir nettoyés, intérieur automobile impeccable" loading="lazy" />
         <span class="gal-caption"><span class="tag">Nettoyage automobile</span><h4>Intérieur cuir</h4></span>
       </a>
       <a class="gal-item" href="https://www.facebook.com/Cleanet45/" target="_blank" rel="noopener">
-        <img src="assets/img/gallery/camion-cabine-1.jpg" alt="Cabine de camion nettoyée, tableau de bord et volant impeccables" loading="lazy" />
+        <img src="assets/img/gallery/camion-cabine-1-sm.jpg" srcset="assets/img/gallery/camion-cabine-1-sm.jpg 900w, assets/img/gallery/camion-cabine-1.jpg 1600w" sizes="(max-width:767px) 78vw, (max-width:959px) 33vw, 24vw" alt="Cabine de camion nettoyée, tableau de bord et volant impeccables" loading="lazy" />
         <span class="gal-caption"><span class="tag">Nettoyage utilitaire</span><h4>Cabine poids lourd</h4></span>
       </a>
       <a class="gal-item" href="https://www.facebook.com/Cleanet45/" target="_blank" rel="noopener">
-        <img src="assets/img/gallery/canape-1.jpg" alt="Canapé d'angle en tissu gris, nettoyage en profondeur par CLEANET 45" loading="lazy" />
+        <img src="assets/img/gallery/canape-1-sm.jpg" srcset="assets/img/gallery/canape-1-sm.jpg 900w, assets/img/gallery/canape-1.jpg 1600w" sizes="(max-width:767px) 78vw, (max-width:959px) 33vw, 24vw" alt="Canapé d'angle en tissu gris, nettoyage en profondeur par CLEANET 45" loading="lazy" />
         <span class="gal-caption"><span class="tag">Canapé &amp; fauteuils</span><h4>Canapé d'angle</h4></span>
       </a>
       <a class="gal-item" href="https://www.facebook.com/Cleanet45/" target="_blank" rel="noopener">
-        <img src="assets/img/gallery/canape-2.jpg" alt="Détail d'un canapé en tissu traité par injection-extraction" loading="lazy" />
+        <img src="assets/img/gallery/canape-2-sm.jpg" srcset="assets/img/gallery/canape-2-sm.jpg 900w, assets/img/gallery/canape-2.jpg 1600w" sizes="(max-width:767px) 78vw, (max-width:959px) 33vw, 24vw" alt="Détail d'un canapé en tissu traité par injection-extraction" loading="lazy" />
         <span class="gal-caption"><span class="tag">Canapé &amp; fauteuils</span><h4>Détail tissu</h4></span>
       </a>
       <a class="gal-item" href="https://www.facebook.com/Cleanet45/" target="_blank" rel="noopener">
-        <img src="assets/img/gallery/canape-3.jpg" alt="Canapé d'angle gris nettoyé, traces de brossage visibles après injection-extraction" loading="lazy" />
+        <img src="assets/img/gallery/canape-3-sm.jpg" srcset="assets/img/gallery/canape-3-sm.jpg 900w, assets/img/gallery/canape-3.jpg 1920w" sizes="(max-width:767px) 78vw, (max-width:959px) 33vw, 24vw" alt="Canapé d'angle gris nettoyé, traces de brossage visibles après injection-extraction" loading="lazy" />
         <span class="gal-caption"><span class="tag">Canapé &amp; fauteuils</span><h4>Canapé — Olivet</h4></span>
       </a>
       <a class="gal-item" href="https://www.facebook.com/Cleanet45/" target="_blank" rel="noopener">
-        <img src="assets/img/gallery/cuir-interieur-2.jpg" alt="Sièges en cuir nettoyés en profondeur, intérieur automobile" loading="lazy" />
+        <img src="assets/img/gallery/cuir-interieur-2-sm.jpg" srcset="assets/img/gallery/cuir-interieur-2-sm.jpg 900w, assets/img/gallery/cuir-interieur-2.jpg 1920w" sizes="(max-width:767px) 78vw, (max-width:959px) 33vw, 24vw" alt="Sièges en cuir nettoyés en profondeur, intérieur automobile" loading="lazy" />
         <span class="gal-caption"><span class="tag">Nettoyage automobile</span><h4>Sellerie cuir</h4></span>
       </a>
       <a class="gal-item" href="https://www.facebook.com/Cleanet45/" target="_blank" rel="noopener">
-        <img src="assets/img/gallery/interieur-tableau-bord.jpg" alt="Tableau de bord et console centrale nettoyés, intérieur automobile soigné" loading="lazy" />
+        <img src="assets/img/gallery/interieur-tableau-bord-sm.jpg" srcset="assets/img/gallery/interieur-tableau-bord-sm.jpg 900w, assets/img/gallery/interieur-tableau-bord.jpg 1920w" sizes="(max-width:767px) 78vw, (max-width:959px) 33vw, 24vw" alt="Tableau de bord et console centrale nettoyés, intérieur automobile soigné" loading="lazy" />
         <span class="gal-caption"><span class="tag">Nettoyage automobile</span><h4>Tableau de bord</h4></span>
       </a>
       <a class="gal-item" href="https://www.facebook.com/Cleanet45/" target="_blank" rel="noopener">
-        <img src="assets/img/gallery/camion-cabine-2.jpg" alt="Cabine de poids lourd nettoyée, volant et tableau de bord impeccables" loading="lazy" />
+        <img src="assets/img/gallery/camion-cabine-2-sm.jpg" srcset="assets/img/gallery/camion-cabine-2-sm.jpg 900w, assets/img/gallery/camion-cabine-2.jpg 1920w" sizes="(max-width:767px) 78vw, (max-width:959px) 33vw, 24vw" alt="Cabine de poids lourd nettoyée, volant et tableau de bord impeccables" loading="lazy" />
         <span class="gal-caption"><span class="tag">Nettoyage utilitaire</span><h4>Cabine poids lourd</h4></span>
       </a>
     </div>
@@ -293,7 +296,7 @@
       <span class="sec-eyebrow">Comment ça marche</span>
       <h2>Votre devis en 4 étapes simples.</h2>
     </div>
-    <div class="proc-grid">
+    <div class="proc-grid" tabindex="0" aria-label="Les 4 étapes de votre devis, faites glisser pour voir la suite">
       <div class="proc-card" data-reveal>
         <div class="proc-num">01</div>
         <h4>Prise de contact</h4>
