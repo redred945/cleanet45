@@ -227,6 +227,47 @@ button{font-family:inherit;cursor:pointer}
 .svc-tag svg{width:13px;height:13px}
 .svc-card:hover .svc-tag{color:var(--blue-2)}
 
+/* ===================== AVANT / APRÈS (slider comparatif) ===================== */
+.ba-slider{max-width:760px;margin:0 auto 56px}
+.ba-frame{
+  position:relative;aspect-ratio:4/3;overflow:hidden;border:1px solid var(--line);
+  background:var(--bg);cursor:ew-resize;user-select:none;-webkit-user-select:none;
+}
+.ba-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;pointer-events:none}
+.ba-before-wrap{position:absolute;inset:0;width:50%;overflow:hidden}
+.ba-before-wrap .ba-img{width:var(--ba-img-w,100%);max-width:none}
+.ba-tag{
+  position:absolute;top:16px;z-index:2;font-family:var(--ff-mono);font-size:9.5px;font-weight:500;
+  letter-spacing:.15em;text-transform:uppercase;padding:6px 12px;background:rgba(4,7,15,.72);
+  backdrop-filter:blur(6px);color:var(--text-dim);pointer-events:none;
+}
+.ba-tag-before{left:16px}
+.ba-tag-after{right:16px}
+.ba-handle{
+  position:absolute;top:0;bottom:0;left:50%;width:2px;background:var(--blue);z-index:3;
+  transform:translateX(-1px);pointer-events:none;box-shadow:0 0 16px var(--glow);
+}
+.ba-handle::before{
+  content:"";position:absolute;top:50%;left:50%;width:44px;height:44px;border-radius:50%;
+  background:var(--blue);transform:translate(-50%,-50%);
+}
+.ba-handle svg{
+  position:absolute;top:50%;left:50%;width:20px;height:20px;transform:translate(-50%,-50%);color:#fff;z-index:1;
+}
+.ba-range{
+  display:block;width:100%;margin-top:16px;-webkit-appearance:none;appearance:none;
+  height:2px;background:var(--line-2);outline:none;
+}
+.ba-range::-webkit-slider-thumb{
+  -webkit-appearance:none;appearance:none;width:18px;height:18px;border-radius:50%;
+  background:var(--blue);cursor:pointer;box-shadow:0 0 0 4px var(--blue-dim);
+}
+.ba-range::-moz-range-thumb{
+  width:18px;height:18px;border-radius:50%;background:var(--blue);border:none;cursor:pointer;
+  box-shadow:0 0 0 4px var(--blue-dim);
+}
+.ba-caption{margin-top:14px;text-align:center;font-size:12.5px;color:var(--text-mute)}
+
 /* ===================== GALLERY (réalisations) — lignes de grille ===================== */
 .gal-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px;background:var(--line)}
 @media(min-width:640px){.gal-grid{grid-template-columns:repeat(3,1fr)}}

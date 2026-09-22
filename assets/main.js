@@ -82,6 +82,49 @@
     });
   });
 
+  /* Before/after comparison slider */
+  var baFrame = document.getElementById("baFrame");
+  var baWrap = document.getElementById("baBeforeWrap");
+  var baHandle = document.getElementById("baHandle");
+  var baRange = document.getElementById("baRange");
+  if (baFrame && baWrap && baHandle && baRange) {
+    function setBaPosition(pct) {
+      pct = Math.max(0, Math.min(100, pct));
+      baWrap.style.width = pct + "%";
+      baHandle.style.left = pct + "%";
+      var frameW = baFrame.getBoundingClientRect().width;
+      baWrap.style.setProperty("--ba-img-w", frameW + "px");
+    }
+    setBaPosition(50);
+    baRange.addEventListener("input", function () {
+      setBaPosition(parseFloat(baRange.value));
+    });
+    window.addEventListener("resize", function () {
+      setBaPosition(parseFloat(baRange.value));
+    });
+
+    function pointerToPct(clientX) {
+      var rect = baFrame.getBoundingClientRect();
+      return ((clientX - rect.left) / rect.width) * 100;
+    }
+    var dragging = false;
+    baFrame.addEventListener("pointerdown", function (e) {
+      dragging = true;
+      baFrame.setPointerCapture(e.pointerId);
+      var pct = pointerToPct(e.clientX);
+      baRange.value = pct;
+      setBaPosition(pct);
+    });
+    baFrame.addEventListener("pointermove", function (e) {
+      if (!dragging) return;
+      var pct = pointerToPct(e.clientX);
+      baRange.value = pct;
+      setBaPosition(pct);
+    });
+    baFrame.addEventListener("pointerup", function () { dragging = false; });
+    baFrame.addEventListener("pointercancel", function () { dragging = false; });
+  }
+
   /* Zone map: click a city to recenter/highlight it */
   var zoneList = document.getElementById("zoneList");
   var zoneMap = document.getElementById("zoneMap");
